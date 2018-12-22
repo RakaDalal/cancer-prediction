@@ -1,9 +1,28 @@
+<!-- Posts the results -->
 <html>
 	<head>
-        <title>{{ title }} - Biosight</title>
+        <title>Results - Biosight</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
     <body>
-    	<h2>Result: {{result}} </h2>
+    	<b> <h1 class  = "text-center">Your results:</h1> </b>
+    	<div class="container-fluid"> 
+          <div class="row" >
+          	<div class="col-md-offset-3 col-md-6">
+          		<b> <h2 class  = "text-center">{{result}}</h2> </b>
+          	</div> 
+          </div>
+      	</div>
+   		<!-- Button that returns the page to the initial index page -->
+   		
+   		<div class="container-fluid"> 
+          <div class="row" >
+            <div class="col-md-offset-3 col-md-6 " > 
+           
+              <a href="http://localhost:5000/" class = "btn btn-default btn-lg btn-block">Upload another image</a>
+              
+            </div>
+          </div>
+      </div>
     </body>
 </html>
- 

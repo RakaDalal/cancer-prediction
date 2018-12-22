@@ -1,15 +1,51 @@
 <!-- Uploads the file -->
 <html>
     <head>
-        <title>{{ title }} - Biosight</title>
+        <title>Home - Biosight</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     </head>
-    <body>
-      <h1>Upload file here: </h1>
+    <body >
+      <div class="container-fluid"> 
+        <div class = "row">
+          <div class="text-center">
+            <img src = "https://res-1.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/ddctcttduzrjwucdgpeh" 
+            class = "center">
+          </div>
+        </div>
+      </div>
+      <h1 class  = "text-center"><b>Welcome!</b></h1> 
+        <div class="container-fluid"> 
+          <div class="row" >
+            <div class="col-md-offset-3 col-md-6 " >
+              <h2 class = "text-center"> This is a diagnostic tool to detect if a patient has Brain Cancer
+                (<a href = "https://en.wikipedia.org/wiki/Glioblastoma">Glioblastoma Multiforme</a>)
+                from Brain MRI images
+              </h2>
+            </div>
+          </div>
+          <div class = "row">
+            <h3 class = "text-center">Select your image file here:</h3>
+          </div>
+        </div>
+      
       <!--Created the Choose File and Submit buttons on the first/index pages -->
-      <form action = "http://localhost:5000/upload" method = "POST" enctype = "multipart/form-data">
-         <input type = "file" name = "file" />
-         <input type = "submit"/>
+      <form style = 'margin-left: 15px' action = "http://localhost:5000/upload" method = "POST" enctype = "multipart/form-data">
+        <div class="container-fluid"> 
+          <div class="row" >
+            <div class="col-md-offset-3 col-md-6 " > 
+              <label class="btn btn-default btn-lg btn-block">
+                <input type = "file" name = "file" style="display:none;"/>
+                Submit your file
+              </label>
+            </div>
+          </div>
+          <div class = "row">
+            <div class="col-md-offset-3 col-md-6"> 
+              <input type = "submit" class="btn btn-default btn-lg btn-block"/>
+            </div>
+          </div>
+        </div>
       </form>
       
      </body>
-</html>
+</html
