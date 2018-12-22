@@ -5,6 +5,7 @@ from werkzeug import secure_filename
 from keras.models import model_from_json
 import numpy as np
 from keras.preprocessing import image
+import os 
 
 app = Flask(__name__)
 
@@ -53,6 +54,8 @@ def upload_file():
     	f.save(image_path)
         test_image = image.load_img(image_path, target_size = (64, 64))
         result= prediction(loaded_model, test_image)
-    	#renders the template for displaying the image manipulation
+    	#removing the image
+        os.remove(image_path)
+        #renders the template for displaying the image manipulation
         return render_template('post.html', result = result)
 
