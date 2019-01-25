@@ -13,6 +13,7 @@ pip install -r requirements.txt
 Step 2: To run the User Interface:
 
 export FLASK_APP=UI.py
+
 flask run
 
 # Test-images
