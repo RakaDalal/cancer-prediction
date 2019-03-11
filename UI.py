@@ -29,9 +29,9 @@ def prediction(classifier, test_image):
     test_image = np.expand_dims(test_image, axis = 0)
     result = classifier.predict(test_image)
     if result[0][0] >= 0.5:
-        prediction = 'healthy'
+        prediction = 'NON-CANCEROUS'
     else:
-        prediction = 'cancerous'
+        prediction = 'CANCEROUS'
     return (prediction)
 
 #main page that comes up first 
